@@ -1,0 +1,8 @@
+
+table,td {
+    border: 1px solid white;
+    border-collapse: collapse;
+  }
+  td {
+    background-color: #99ebff;
+  }
