@@ -3,7 +3,7 @@
 <head>
   <link rel="stylesheet" href="table.css">
 </head>
-<body>
+<body onload="OpenOverlay ()">
 <div>
   <center>
     <table width="800">
@@ -97,7 +97,34 @@
  </center>
 </div>
  
+<div id="myNav" class="overlay">
+  
  
+  <div class="overlay-content">
+    <center><p id="texttyping"></p></center>
+    <center><button onclick="closeOverlay()">Hire Me</button></center>
+
+  </div>
+</div>
+ <script>
+let i = 0;
+let txt = 'Solving Tech & Business Problems using Data';
+let speed = 200;
+
+
+function OpenOverlay() {
+  document.getElementById("myNav").style.height = "100%";
+  if (i < txt.length) {
+    document.getElementById("texttyping").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(OpenOverlay, speed);
+  }
+}
+
+function closeOverlay() {
+  document.getElementById("myNav").style.height = "0%";
+}
+ </script>
 
 </body>
 </html>
